@@ -36,7 +36,7 @@ class PclSub : public rclcpp::Node
     PclSub(): Node("pclsub")
     {
       sub_novel = this->create_subscription<sensor_msgs::msg::PointCloud2>(
-        "/camera/pointcloud", 
+        "/Head/D435_H/depth/color/points", 
         10, 
         std::bind(&PclSub::topic_callback, this, std::placeholders::_1)\
       );
