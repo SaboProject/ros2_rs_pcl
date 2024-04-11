@@ -53,7 +53,7 @@ class PclSub : public rclcpp::Node
     {
       pcl::PointCloud<pcl::PointXYZRGB>::Ptr cloud(new pcl::PointCloud<pcl::PointXYZRGB>);
       pcl::fromROSMsg(*cloud_msg, *cloud);
-      RCLCPP_INFO(this->get_logger(), "cloud_size(%d)",cloud->points.size());
+      RCLCPP_INFO(this->get_logger(), "cloud_size(%ld)",cloud->points.size());
       RCLCPP_INFO(this->get_logger(), "points_size(%d,%d)",cloud_msg->height,cloud_msg->width);
 
       // define a new container for the data
